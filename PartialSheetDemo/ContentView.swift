@@ -6,11 +6,37 @@
 //
 
 import SwiftUI
+import HalfASheet
 
 struct ContentView: View {
+    @State private var isShowing = false
+    @State private var amount = 0.0
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            Button("Show sheet") {
+                isShowing.toggle()
+            }
+            HalfASheet(isPresented: $isShowing, title: "Sample Title") {
+                VStack(spacing: 20) {
+                    Image(systemName: "leaf")
+                        .font(.system(size: 80))
+                        .foregroundColor(.blue)
+                    Slider(value: $amount, in: 0...100)
+                    
+                    Text("Sample content")
+                        .italic()
+                }
+                .padding()
+            }
+            // Customise by editing these.
+            .height(.proportional(0.40))
+            .closeButtonColor(UIColor.white)
+            .backgroundColor(.white)
+            .contentInsets(EdgeInsets(top: 30, leading: 10, bottom: 30, trailing: 10))
+        }
+        .ignoresSafeArea()
+        
     }
 }
 

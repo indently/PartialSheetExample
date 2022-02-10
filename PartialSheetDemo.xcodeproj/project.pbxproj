@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A020CA727B583E60047B592 /* HalfASheet in Frameworks */ = {isa = PBXBuildFile; productRef = 7A020CA627B583E60047B592 /* HalfASheet */; };
 		7A57DC3827B4FB42001057AC /* PartialSheetDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A57DC3727B4FB42001057AC /* PartialSheetDemoApp.swift */; };
 		7A57DC3A27B4FB42001057AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A57DC3927B4FB42001057AC /* ContentView.swift */; };
 		7A57DC3C27B4FB43001057AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A57DC3B27B4FB43001057AC /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A020CA727B583E60047B592 /* HalfASheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = PartialSheetDemo;
+			packageProductDependencies = (
+				7A020CA627B583E60047B592 /* HalfASheet */,
+			);
 			productName = PartialSheetDemo;
 			productReference = 7A57DC3427B4FB42001057AC /* PartialSheetDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 7A57DC2B27B4FB42001057AC;
+			packageReferences = (
+				7A020CA527B583E60047B592 /* XCRemoteSwiftPackageReference "HalfASheet" */,
+			);
 			productRefGroup = 7A57DC3527B4FB42001057AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A020CA527B583E60047B592 /* XCRemoteSwiftPackageReference "HalfASheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/franklynw/HalfASheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A020CA627B583E60047B592 /* HalfASheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A020CA527B583E60047B592 /* XCRemoteSwiftPackageReference "HalfASheet" */;
+			productName = HalfASheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7A57DC2C27B4FB42001057AC /* Project object */;
 }
