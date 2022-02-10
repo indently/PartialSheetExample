@@ -22,7 +22,7 @@ struct ContentView: View {
                     Image(systemName: "leaf")
                         .font(.system(size: 80))
                         .foregroundColor(.blue)
-                        .rotation3DEffect(Angle(degrees: amount), axis: (x: 0, y: 1, z: 0.0))
+                        .rotation3DEffect(Angle(degrees: amount), axis: (x: -1, y: -1, z: 0))
                     
                     Slider(value: $amount, in: 0...360)
                     
