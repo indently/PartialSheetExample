@@ -38,7 +38,6 @@ struct ContentView: View {
             .contentInsets(EdgeInsets(top: 30, leading: 10, bottom: 30, trailing: 10))
         }
         .ignoresSafeArea()
-        
     }
 }
 
