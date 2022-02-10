@@ -17,14 +17,16 @@ struct ContentView: View {
             Button("Show sheet") {
                 isShowing.toggle()
             }
-            HalfASheet(isPresented: $isShowing, title: "Sample Title") {
+            HalfASheet(isPresented: $isShowing, title: "Rotation") {
                 VStack(spacing: 20) {
                     Image(systemName: "leaf")
                         .font(.system(size: 80))
                         .foregroundColor(.blue)
-                    Slider(value: $amount, in: 0...100)
+                        .rotation3DEffect(Angle(degrees: amount), axis: (x: 0, y: 1, z: 0.0))
                     
-                    Text("Sample content")
+                    Slider(value: $amount, in: 0...360)
+                    
+                    Text("Degrees: \(Int(amount))")
                         .italic()
                 }
                 .padding()
